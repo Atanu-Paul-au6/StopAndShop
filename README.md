@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/72328a23-cbcf-44af-84b9-4ded58c285f3/deploy-status)](https://app.netlify.com/sites/stopandshop/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
