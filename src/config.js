@@ -1,1 +1,1 @@
-export const API = https://stopandshopapi.herokuapp.com
+export const API = https://stopandshopapi.herokuapp.com;
