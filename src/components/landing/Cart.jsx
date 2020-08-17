@@ -9,7 +9,7 @@ const Cart = () => {
 
   useEffect(() => {
     setItems(getCart());
-  }, [run]);
+  }, [run, items]);
 
   const showItems = (items) => {
     const itemsincard = "itemsincard";
@@ -33,6 +33,9 @@ const Cart = () => {
               setRun={setRun}
               run={run}
               id={itemsincard}
+              showAddToCartButton={false}
+              cartItemIncrement={true}
+              removeButton={true}
             />
           ))}
         </div>
