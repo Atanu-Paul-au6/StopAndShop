@@ -69,13 +69,17 @@ const Card = ({
     );
   };
 
+  const removeItemFromCart = () => {
+    removeCartItem(product._id);
+    setRun(!run);
+  };
   const removeItemButton = (removeButton) => {
     return (
       removeButton && (
         <button
           className="cartInputLableStyle btn btn-raised btn-outline-danger"
           style={{ marginTop: "1em" }}
-          onClick={() => removeCartItem(product._id)}
+          onClick={removeItemFromCart}
         >
           <i className="fas fa-trash-alt" style={{ fontSize: "x-large" }}></i>
         </button>

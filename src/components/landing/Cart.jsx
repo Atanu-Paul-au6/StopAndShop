@@ -9,7 +9,7 @@ const Cart = () => {
 
   useEffect(() => {
     setItems(getCart());
-  }, [run, items]);
+  }, [run]);
 
   const showItems = (items) => {
     const itemsincard = "itemsincard";
