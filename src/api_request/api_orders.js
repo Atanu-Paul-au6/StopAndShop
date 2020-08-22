@@ -15,6 +15,7 @@ export const newOrder = async (userId, token, OrderPayload) => {
     return console.log(err);
   }
 };
+
 export const getOrders = async (userId, token) => {
   try {
     const response = await fetch(`${API}/order/show/${userId}`, {
@@ -36,6 +37,23 @@ export const getOrderStatusValues = async (userId, token) => {
       headers: {
         Authorization: `Bearer ${token}`,
       },
+    });
+    return response.json();
+  } catch (err) {
+    return console.log(err);
+  }
+};
+
+export const changeOrderStatus = async (userId, token, orderId, status) => {
+  try {
+    const response = await fetch(`${API}/order/${orderId}/status/${userId}`, {
+      method: "PUT",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ status, orderId }),
     });
     return response.json();
   } catch (err) {
